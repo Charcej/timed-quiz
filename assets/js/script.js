@@ -1,17 +1,26 @@
-var seconds = 75;
+var quizEl = document.querySelector('#start-quiz');
+var timerEl = document.getElementById('countdown');
 
-// Add event listener to 'start quiz' button, should start timer and launch first question
-timerStart.addEventListener("click", quizBegins);
-
-
-// will need an event listener for each submission for questions 1 - 10
+quizEl.addEventListener('click', function() {
 
 
-var quizBegins = function(event) {
-    // get target element from event
-    var targetEl = event.target;
-    // start quiz with question 1
-};
+    function countdown () {
+    var timeLeft = 75;
+    
+        var timeInterval = setInterval(function() {
 
+        if (timeLeft > 0) {
 
+            timerEl.textContent = timeLeft;
+            timeLeft--;
+        }
+        else {
+            timerEl.textContent = '';
+            clearInterval(timeInterval);
+            displayMessage ();
+        }
 
+        }, 1000);
+    }
+
+});

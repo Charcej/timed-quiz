@@ -45,6 +45,15 @@ header a {
     text-align: left;
 }
 
+.countdown {
+    margin-top: 15px;
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    width: 100px; 
+    text-align: left;
+}
+
 main {
     display: flex;
     flex-wrap: wrap;
