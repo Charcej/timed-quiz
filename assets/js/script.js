@@ -21,9 +21,34 @@ function countdown () {
             timerEl.textContent = '';
             clearInterval(timeInterval);
             alert("Your time is up!");
-        }
-        
+        }        
     }, 1000);
+
+//     // seeing if button can also present first question and replace intro page with it
+//     // this should be grabbing the class "quiz-page" div
+//     // so far so good the console.log does display the first array I put in questions.js file
+         var firstQuestion = document.querySelector('.quiz-page')
+         console.log(questions);
+
+            // populate code w/ info from data file
+            for (var i = 0; i < questions.length; i++) {
+                var div = document.createElement ('div');
+            }
+
+//         // create elements
+         var div = document.createElement ('div');
+         var h2 = document.createElement ('h2');
+         var p = document.createElement ('p');
+
+//         // add content
+         h2.textContent = questions[0].question;
+         p.textContent = questions[0].options;
+
+//         // take content and put it on the page
+         div.appendChild(h2);
+         div.appendChild(p);
+
+
 
 }
 
@@ -31,6 +56,8 @@ function countdown () {
 countdown ();
 
 });
+
+ 
 
 
 
