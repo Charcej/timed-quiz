@@ -12,8 +12,9 @@
     <!-- Link to high scores-->
     <header>
         <p class="high-scores">
-            <a href="#high-scores">View high scores</a>                
+            <a href="#high-scores">View High Scores</a>                
         </p>
+
     <!-- Timer -->
     <div>
         <p class="timer">
@@ -24,16 +25,44 @@
     </header>
 
     <!-- Intro Page to quiz with button to press -->
-    <main>
+    <main class="intro-page">
         <h1>Coding Quiz Challenge</h1>
         <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
         <button class="start-btn" id="start-quiz" type="submit">Start Quiz</button>
     </main>
 
+    <!-- quiz page -->
+    <div class="quiz-page">
+        <section>
+            <div class="question-text">
+                <!-- inserted question from JS -->
+            </div>
+            <div class="option-list">
+                <!-- inserted options from JS -->
+            </div>
+        </section>
+    </div>
+
+    <!-- result page -->
+    <div class="result-page">
+        <!-- add all done, final score, and box to enter initials, then a submit button -->
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- high score page -->
+    <div class="score-page">
+        <!-- add a box for initials and have a 'go back' button or a 'clear high score' button-->
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 
     <footer></footer>
 
-    <script src="./assets/js/script.js"></script> 
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/questions.js"></script> 
     
 </body>
 </html>
