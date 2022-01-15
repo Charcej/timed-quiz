@@ -1,26 +1,32 @@
-var quizEl = document.querySelector('#start-quiz');
+
+var startEl = document.querySelector('#start-quiz');
 var timerEl = document.getElementById('countdown');
 
-quizEl.addEventListener('click', function() {
+document.querySelector('#start-quiz').addEventListener('click', function () {
 
-
-    function countdown () {
+function countdown () {
     var timeLeft = 75;
-    
-        var timeInterval = setInterval(function() {
 
-        if (timeLeft > 0) {
+    var timeInterval = setInterval(function () {
 
-            timerEl.textContent = timeLeft;
-            timeLeft--;
-        }
-        else {
+        if (timeLeft > -1) {
+        
+        timerEl.textContent = timeLeft;
+        timeLeft--;
+        
+        } else {
             timerEl.textContent = '';
             clearInterval(timeInterval);
-            displayMessage ();
+            alert("Your time is up!");
         }
+        
+    }, 1000);
 
-        }, 1000);
-    }
+}
+
+countdown ();
 
 });
+
+
+

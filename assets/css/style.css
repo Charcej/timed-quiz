@@ -45,6 +45,16 @@ header a {
     text-align: left;
 }
 
+.timer-text {
+    margin-top: 15px;
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    width: 100px; 
+    text-align: center;
+    padding-left: 15px;
+}
+
 .countdown {
     margin-top: 15px;
     position: absolute; 
