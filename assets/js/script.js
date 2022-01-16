@@ -36,12 +36,10 @@ document.querySelector('#start-quiz').addEventListener('click', function () {
     buttonFour.textContent = questions[0].options[3];
 
     //set style to the buttons
-    buttonOne.setAttribute('style', 'background-color: violet',);
-    buttonTwo.setAttribute('style', 'background-color: violet',);
-    buttonThree.setAttribute('style', 'background-color: violet',);
-    buttonFour.setAttribute('style', 'background-color: violet',);
-
-
+    // buttonOne.setAttribute('style', 'background-color: violet',);
+    // buttonTwo.setAttribute('style', 'background-color: violet',);
+    // buttonThree.setAttribute('style', 'background-color: violet',);
+    // buttonFour.setAttribute('style', 'background-color: violet',);
 
     // take content and put it on the page
     div.appendChild(h1);
