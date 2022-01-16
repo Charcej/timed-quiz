@@ -3,6 +3,7 @@
 var startEl = document.querySelector('#start-quiz');
 var timerEl = document.getElementById('countdown');
 var quizPage = document.querySelector(".quiz-page");
+var answerEl = document.getElementById('#answer-button');
 
 // event listener to start timer
 document.querySelector('#start-quiz').addEventListener('click', function () {
@@ -49,13 +50,13 @@ document.querySelector('#start-quiz').addEventListener('click', function () {
     div.appendChild(buttonFour);
 
     quizPage.appendChild(div);
-
-
 }
 
 startEl.addEventListener("click", function (event) {
     console.log(event.target);
 })
+
+
 
 // function to count down from 75 to 0
 function countdown () {
@@ -75,10 +76,6 @@ function countdown () {
         }        
     }, 1000);
 }
-
-
-    
-
 
 // timer function call
 countdown ();
