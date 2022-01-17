@@ -16,7 +16,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     color: var(--primary-color);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Staatliches, sans-serif;
 }
 
 header {
@@ -100,6 +100,7 @@ main p {
     position: relative;
     top: -3px;
     box-shadow: 0 3px var(--grey);
+    cursor: pointer;
 }
 
 .start-btn:hover {
@@ -143,6 +144,7 @@ main p {
     position: relative;
     top: -3px;
     box-shadow: 0 3px var(--grey);
+    cursor: pointer;
 }
 
 .quiz-page button:hover {

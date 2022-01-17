@@ -56,8 +56,6 @@ startEl.addEventListener("click", function (event) {
     console.log(event.target);
 })
 
-
-
 // function to count down from 75 to 0
 function countdown () {
     var timeLeft = 75;
