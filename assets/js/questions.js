@@ -11,7 +11,48 @@ var questions = [
            "4. numbers"
        ]
     },
-
-    
-
+    {
+        number: 2,
+        question: "The condition of an if / else statement is enclosed with _____.",
+        answer: "2. curly brackets",
+        options: [
+            "1. quotes",
+            "2. curly brackets",
+            "3. parenthesis",
+            "4. square brackets"
+        ]
+    },
+    {
+        number: 3,
+        question: "Arrays in JavaScript can be used to store _____.",
+        answer: "4. all of the above",
+        options: [
+            "1. numbers and strings",
+            "2. other arrays",
+            "3. booleans",
+            "4. all of the above"
+        ]
+    },
+    {
+        number: 4,
+        question: "String values must be enclosed within _____ when being assigned to variables.",
+        answer: "4. parentheses",
+        options: [
+            "1. commas",
+            "2. curly brackets",
+            "3. quotes",
+            "4. parentheses"
+        ]
+    },
+    {
+        number: 5,
+        question: "A very useful tool used during development and debugging for printing content to the debugger is:",
+        answer: "4. console log",
+        options: [
+            "1. JavaScript",
+            "2. terminal/bash",
+            "3. for loops",
+            "4. console log"
+        ]
+    }
 ];
