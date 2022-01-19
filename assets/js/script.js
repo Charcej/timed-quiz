@@ -10,7 +10,6 @@ var timeLeft = 75;
 
 // event listener to start timer
 document.querySelector('#start-quiz').addEventListener('click', function () {
-
     // clears the intro page section
     var element = document.getElementById("intro");
     element.parentNode.removeChild(element);
@@ -35,6 +34,7 @@ function getQuestion() {
     buttonThree.textContent = questions[questionIndex].options[2];
     buttonFour.textContent = questions[questionIndex].options[3];
 
+    // event listeners for all four buttons
     buttonOne.addEventListener("click", checkAnswer);
     buttonTwo.addEventListener("click", checkAnswer);
     buttonThree.addEventListener("click", checkAnswer);
@@ -51,9 +51,7 @@ function getQuestion() {
     quizPage.appendChild(div);
 }
 
-// another eventListener for answer-button that then checks which button is clicked and sees whether it matches answer or is wrong and says below correct or wrong
-// how to trigger next question - should there be a delay? Or a button that says next button? 
-
+// checks if button clicked matches answer
 function checkAnswer(event) {
     var userChoice = event.target.innerText
     if (userChoice === questions[questionIndex].answer) {
