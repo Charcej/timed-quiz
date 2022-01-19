@@ -205,24 +205,28 @@ main p {
 
 .result-page input {
     padding: 5px 5px;
-    /* display: flex;
-    flex-wrap: wrap;
-    padding-top: 10px;
-    padding-left: 250px;
-    padding-right: 250px; */
 }
 
 @media screen and (max-width: 980px) {
 
     main h1 {
         padding-left: 50px;
-        padding-right: 50px;
+        padding-right: 300px;
     }
 
     main p {
-        padding-left: 25px;
-        padding-right: 25px;
-    };
+        padding-left: 50px;
+        padding-right: 300px;
+    }; 
+
+    .quiz-page {
+        padding-right: 400px;
+    }
+
+    .result-page {
+        padding-left: 50px;
+        padding-right: 300px;
+    }
    
 
 }
