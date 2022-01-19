@@ -172,19 +172,18 @@ main p {
 
 .result-page p {
     padding-top: 10px;
-    padding-top: 10px;
 }
 
 .result-page button {
     margin: auto;
-    margin-top: 30px;
     outline: none;
     border: none;
     display: inline-block;
-    padding: 10px 15px;
+    padding: 8px 15px;
+    margin-left: 10px;
     background-color: var(--secondary-color);
     color: var(--white);
-    font-size: 20px;
+    font-size: 13px;
     border-radius: 12px;
     position: relative;
     top: -3px;
@@ -205,11 +204,12 @@ main p {
 }
 
 .result-page input {
-    display: flex;
+    padding: 5px 5px;
+    /* display: flex;
     flex-wrap: wrap;
     padding-top: 10px;
     padding-left: 250px;
-    padding-right: 250px;
+    padding-right: 250px; */
 }
 
 @media screen and (max-width: 980px) {

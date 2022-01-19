@@ -86,7 +86,7 @@ function finalScore () {
 
       // add content
       h1.textContent = "All done!";
-      p.textContent = "Your final score is " + timeLeft;
+      p.textContent = "Your final score is " + (timeLeft + 11);
       p2.textContent = "Enter initials: "
       input.textContent = "";
       button.textContent = "Submit";

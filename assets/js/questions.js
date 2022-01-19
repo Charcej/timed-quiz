@@ -27,7 +27,7 @@ var questions = [
         question: "3. Arrays in JavaScript can be used to store _____.",
         answer: "4. all of the above",
         options: [
-            "1. numbers and strings",
+            "1. numbers",
             "2. other arrays",
             "3. booleans",
             "4. all of the above"
