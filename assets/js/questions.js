@@ -3,7 +3,7 @@ var questions = [
     {
         number: 1,
         question: "1. Commonly used data types do not include:",
-        answer: "3) alerts",
+        answer: "3. alerts",
         options: [
            "1. strings",
            "2. booleans",
