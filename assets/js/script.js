@@ -7,6 +7,7 @@ var answerEl = document.getElementById('#answer-button');
 var questionIndex = 0;
 var timeInterval;
 var timeLeft = 75;
+var resultsPage = document.querySelector(".result-page");
 
 // event listener to start timer
 document.querySelector('#start-quiz').addEventListener('click', function () {
@@ -65,8 +66,39 @@ function checkAnswer(event) {
         getQuestion ();
     } else {
         clearInterval (timeInterval);
-        alert("You've finished the quiz");
+        finalScore ();
     }
+}
+
+// function to remove final question and show results page
+function finalScore () {
+    //   // clears the question section
+    //   var clearAllQuestions = document.getElementById("answer-button");
+    //   quizPage.innerHTML = "";
+
+      // create elements
+      var div = document.createElement('div');
+      var h1 = document.createElement('h1');
+      var p = document.createElement('p');
+      var p2 = document.createElement('p')
+      var input = document.createElement('input');
+      var button = document.createElement('button');
+
+      // add content
+      h1.textContent = "All done!";
+      p.textContent = "Your final score is " + timeLeft;
+      p2.textContent = "Enter initials: "
+      input.textContent = "";
+      button.textContent = "Submit";
+
+      // put content on page
+      div.appendChild(h1);
+      div.appendChild(p);
+      div.appendChild(p2);
+      div.appendChild(input);
+      div.appendChild(button);
+      quizPage.innerHTML = "";
+      resultsPage.appendChild(div);
 }
 
 // function to count down from 75 to 0
