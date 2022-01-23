@@ -72,61 +72,68 @@ function checkAnswer(event) {
     }
 }
 
-// function to remove final question and show results page
-function finalScore () {
-    //   // clears the question section
-    //   var clearAllQuestions = document.getElementById("answer-button");
-    //   quizPage.innerHTML = "";
+    // declare variable limited to scope of block statement or expresiion on which it is used
+    // function to remove final question and show results page
+    let initialInput;
+    function finalScore () {
 
       // create elements
       var div = document.createElement('div');
       var h1 = document.createElement('h1');
       var p = document.createElement('p');
-      var p2 = document.createElement('p')
-      var input = document.createElement('input');
+      var p2 = document.createElement('p');
+      initialInput = document.createElement('input');
       var button = document.createElement('button');
 
       // add content
       h1.textContent = "All done!";
       p.textContent = "Your final score is " + timerEl.textContent;
       p2.textContent = "Enter initials: "
-      input.textContent = "";
+      initialInput.textContent = "";
       button.textContent = "Submit";
 
       // put content on page
       div.appendChild(h1);
       div.appendChild(p);
       div.appendChild(p2);
-      div.appendChild(input);
+      div.appendChild(initialInput);
       div.appendChild(button);
       quizPage.innerHTML = "";
       resultsPage.appendChild(div);
 
+      // event listener for submit button
       button.addEventListener("click", highScore);
 
 }
 
+// clears results page and shows high score page
 function highScore() {
+    // alert('Initial Input', initialInput.textContent);
+    console.log('Initial Input', initialInput.value.trim());
+    var initials = initialInput.value.trim();
     var div = document.createElement('div');
     var h1 = document.createElement('h1');
     var p = document.createElement('p');
-    var button = document.createElement('button');
-    var buttonFive = document.createElement('button');
+    // var button = document.createElement('button');
+    // var buttonFive = document.createElement('button');
 
 
     // add content
     h1.textContent = "High Scores";
-    p.textContent = timerEl.textContent;
-    button.textContent = "Go back";
-    buttonFive.textContent = "Clear high score";
+    p.textContent = initials + ' - ' + timerEl.textContent;
+    // button.textContent = "Go back";
+    // buttonFive.textContent = "Clear high score";
 
     // put content on page
     div.appendChild(h1);
     div.appendChild(p);
-    div.appendChild(button);
-    div.appendChild(buttonFive)  
+    // div.appendChild(button);
+    // div.appendChild(buttonFive)  
     resultsPage.innerHTML = "";
     highScorePage.appendChild(div);
+
+    // puts initials and final score in local storage
+    localStorage.setItem("score", JSON.stringify(initials + ' - ' + timerEl.textContent));
 
 }
 
