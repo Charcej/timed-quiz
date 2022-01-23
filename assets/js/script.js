@@ -1,4 +1,3 @@
-
 // selecting all required elements
 var startEl = document.querySelector('#start-quiz');
 var timerEl = document.getElementById('countdown');
@@ -8,6 +7,9 @@ var questionIndex = 0;
 var timeInterval;
 var timeLeft = 75;
 var resultsPage = document.querySelector(".result-page");
+var highScorePage = document.querySelector(".score-page");
+
+
 
 // event listener to start timer
 document.querySelector('#start-quiz').addEventListener('click', function () {
@@ -99,7 +101,35 @@ function finalScore () {
       div.appendChild(button);
       quizPage.innerHTML = "";
       resultsPage.appendChild(div);
+
+      button.addEventListener("click", highScore);
+
 }
+
+function highScore() {
+    var div = document.createElement('div');
+    var h1 = document.createElement('h1');
+    var p = document.createElement('p');
+    var button = document.createElement('button');
+    var buttonFive = document.createElement('button');
+
+
+    // add content
+    h1.textContent = "High Scores";
+    p.textContent = timerEl.textContent;
+    button.textContent = "Go back";
+    buttonFive.textContent = "Clear high score";
+
+    // put content on page
+    div.appendChild(h1);
+    div.appendChild(p);
+    div.appendChild(button);
+    div.appendChild(buttonFive)  
+    resultsPage.innerHTML = "";
+    highScorePage.appendChild(div);
+
+}
+
 
 // function to count down from 75 to 0
 function countdown() {
@@ -118,4 +148,3 @@ function countdown() {
         }
     }, 1000);
 }
-
